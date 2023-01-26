@@ -12,6 +12,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.counselor.databinding.FragmentDashboardBinding;
 
+import org.w3c.dom.Text;
+
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
@@ -23,8 +25,8 @@ public class DashboardFragment extends Fragment {
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         return root;
+
     }
 
     @Override

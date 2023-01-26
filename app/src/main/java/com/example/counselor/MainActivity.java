@@ -1,10 +1,11 @@
 package com.example.counselor;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -13,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.counselor.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,13 +34,22 @@ private ArrayAdapter<String> adapter;
 
         // Связываем наш список с ListView на экране с помощью адаптера.
         list = findViewById(R.id.listView);
-        array = getResources().getStringArray(R.array.children_array);
+        array = getResources().getStringArray(R.array.menu_array);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
                 new ArrayList<String>(Arrays.asList(array)) );
         list.setAdapter(adapter);
 
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, TextContentActivity.class);
+                startActivity(intent);
+            }
+        });
+
+                BottomNavigationView navView = findViewById(R.id.nav_view);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_guide, R.id.navigation_profile, R.id.navigation_about)

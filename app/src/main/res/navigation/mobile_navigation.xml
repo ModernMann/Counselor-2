@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_guide">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_guide"
         android:name="com.example.counselor.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/counselors_guide"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_profile"
         android:name="com.example.counselor.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/personal_account"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_about"
         android:name="com.example.counselor.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/about_app"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
