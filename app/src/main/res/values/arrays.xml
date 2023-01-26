@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_array">
+        <item>Игры</item>
+        <item>Свечки</item>
+        <item>О детях</item>
+    </string-array>
+    <string-array name="children_array">
+        <item>Младший возраст</item>
+        <item>Средний возраст</item>
+        <item>Страший возраст</item>
+    </string-array>
+    <string-array name="gamestype_array">
+        <item>5-минутка</item>
+        <item>На знакомство</item>
+        <item>На сплочение</item>
+        <item>На доверие</item>
+        <item>Тактилка</item>
+        <item>Посмеяться</item>
+    </string-array>
+    <string-array name="candlestype_array">
+        <item>Конфликтные</item>
+        <item>Свечка-Анализ</item>
+        <item>Тематические</item>
+        <item>Прощальные</item>
+    </string-array>
+</resources>
