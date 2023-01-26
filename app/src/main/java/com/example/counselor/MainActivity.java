@@ -26,6 +26,16 @@ private ArrayAdapter<String> adapter;
     private ActivityMainBinding binding;
 
     @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        list = findViewById(R.id.listView);
+        array = getResources().getStringArray(R.array.menu_array);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                new ArrayList<String>(Arrays.asList(array)) );
+        list.setAdapter(adapter);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
